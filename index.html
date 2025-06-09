@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LAHNI CA Official Site</title>
+    <style>
+      header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      }
+
+      .navbar {
+        transition: background-color 0.5s ease, border-bottom 0.5s ease;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background-color: transparent;
+        font-size: 3.2rem;
+        font-weight: 0;
+      }
+
+      .navbar.scrolled {
+        background-color: white;
+        border-bottom: 0.1px solid gray;
+      }
+
+      .nav-right {
+        display: flex;
+
+        align-items: center;
+
+        gap: 10px;
+      }
+
+      .nav-left {
+        display: flex;
+
+        align-items: center;
+
+        gap: 10px;
+      }
+
+      .contact-link {
+        text-decoration: none;
+
+        color: black;
+      }
+
+      .logo {
+        font-size: 4.8rem;
+
+        letter-spacing: 1.12rem;
+
+        font-weight: 512;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+      .logoBack {
+        font-size: 4.8rem;
+
+        letter-spacing: 1.12rem;
+
+        font-weight: 512;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+
+      #plus-sign {
+        font-size: 20px;
+
+        font-weight: 600;
+      }
+
+      #hamburger {
+        display: inline-block;
+      }
+
+      a {
+        color: black;
+      }
+
+      #user-icon {
+        display: inline-block;
+      }
+
+      #background-image {
+        background-image: url(images/Lahni\ landing\ page\ image.png);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+      }
+
+      #title {
+        display: flex;
+        margin-left: 10%;
+        font-size: 19.5vw;
+        text-transform: uppercase;
+        color: white;
+        letter-spacing: 7rem;
+        padding-top: 9vh;
+        text-decoration: none;
+      }
+
+      hr {
+        height: 0.5vh;
+        background-color: white;
+        border: none;
+        width: 69%;
+        margin: 2.69% auto;
+        transform: scaleX(0);
+        transform-origin: center;
+        animation: expandHr 1s ease-out forwards;
+      }
+
+      #hrcircle1,
+      #hrcircle {
+        background-color: white;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+      }
+
+      #hrcircle1 {
+        transform: translate(140px, -66px);
+        animation: hrcircle1 3.1s ease-out forwards;
+      }
+
+      #hrcircle {
+        transform: translate(1340px, -50px);
+        animation: hrcircle 3.1s ease-out forwards;
+      }
+
+      @keyframes expandHr {
+        to {
+          transform: scaleX(1);
+        }
+      }
+
+      @keyframes hrcircle {
+        to {
+          transform: translate(1261px, -49.4px);
+        }
+      }
+
+      @keyframes hrcircle1 {
+        to {
+          transform: translate(230px, -64.8px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-left">
+          <span id="plus-sign">+</span>
+          <a href="#" class="contact-link">Contact Us</a>
+        </div>
+        <span class="logo">LAHNI</span>
+        <div class="nav-right">
+          <div id="menu">
+            <a href="index.html">
+              <div id="hamburger">&#9776;</div>
+              MENU
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section id="background-image">
+      <a href="#"><div id="title">Lahni</div></a>
+      <div><hr /></div>
+      <div id="hrcircle"></div>
+      <div id="hrcircle1"></div>
+    </section>
+
+    <div style="height: 300vh"></div>
+
+    <script>
+      document.addEventListener("scroll", () => {
+        const navbar = document.querySelector(".navbar");
+        const logo = document.querySelector(".logo");
+        if (window.scrollY > 0) {
+          navbar.classList.add("scrolled");
+          logo.classList.add("logoBack");
+        } else {
+          navbar.classList.remove("scrolled");
+          logo.classList.remove("logoBack");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lahni Navbar</title>
+    <style>
+      .navbar {
+        position: sticky;
+        top: 0;
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        padding: 20px 40px;
+
+        background-color: white;
+
+        border-bottom: 0.1px solid gray;
+
+        font-size: 3.2rem;
+        font-weight: 0;
+      }
+
+      .nav-right {
+        display: flex;
+
+        align-items: center;
+
+        gap: 10px;
+      }
+
+      .nav-left {
+        display: flex;
+
+        align-items: center;
+
+        gap: 10px;
+      }
+
+      .contact-link {
+        text-decoration: none;
+
+        color: black;
+      }
+
+      .logo {
+        font-size: 4.8rem;
+
+        letter-spacing: 1.12rem;
+
+        font-weight: 512;
+      }
+
+      #plus-sign {
+        font-size: 20px;
+
+        font-weight: 600;
+      }
+
+      #hamburger {
+        display: inline-block;
+      }
+
+      a {
+        color: black;
+      }
+
+      #user-icon {
+        display: inline-block;
+      }
+
+      #hero-video {
+        display: flex;
+
+        justify-content: center;
+
+        width: 100%;
+      }
+
+      .img-container-notrounded {
+        display: flex;
+
+        gap: 33px;
+
+        overflow-x: scroll;
+      }
+
+      .img-container-notrounded img {
+        height: 360px;
+
+        width: 22.411111%;
+
+        transition: transform 0.5s ease;
+
+        object-fit: cover;
+      }
+
+      .img-container-notrounded img:hover {
+        transform: scale(1.1);
+      }
+
+      .img-container-rounded img:hover {
+        transform: scale(1.1);
+      }
+
+      .img-container-rounded {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 100px;
+
+        padding: 20px;
+      }
+
+      .img-container-rounded img {
+        height: 400px;
+
+        width: 25%;
+
+        min-width: 250px;
+
+        border-radius: 10px;
+
+        transition: transform 0.5s ease;
+
+        object-fit: cover;
+      }
+
+      .view {
+      }
+
+      .block {
+        animation: appear linear;
+
+        animation-timeline: view();
+
+        animation-range: entry 0% cover 40%;
+      }
+
+      @keyframes appear {
+        from {
+          opacity: 0;
+
+          scale: 0.5;
+        }
+
+        to {
+          opacity: 1;
+
+          scale: 1;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-left">
+          <span id="plus-sign">+</span>
+
+          <a href="#" class="contact-link">Contact Us</a>
+        </div>
+
+        <span class="logo">LAHNI</span>
+
+        <div class="nav-right">
+          <div id="menu">
+            <a href="index.html">
+              <div id="hamburger">&#9776;</div>
+
+              MENU
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <video autoplay muted loop playsinline id="hero-video">
+        <source src="videos/vv.mp4" />
+      </video>
+    </header>
+
+    <br />
+
+    <br />
+
+    <div class="view">
+      <section class="img-container-notrounded">
+        <img
+          class="block"
+          src="https://th.bing.com/th/id/OIP.wyqGjSXgh4wUoc-0RGXw1wHaE8?w=235&h=180&c=7&r=0&o=7&cb=iwp2&dpr=1.3&pid=1.7&rm=3"
+          alt="Stephen Curry" />
+
+        <img
+          class="block"
+          src="https://wallpaperaccess.com/full/659155.jpg"
+          alt="Basketball action" />
+
+        <img
+          class="block"
+          src="https://wallpaperaccess.com/full/3035857.jpg"
+          alt="Player dunking" />
+
+        <img
+          class="block"
+          src="https://static1.srcdn.com/wordpress/wp-content/uploads/2024/10/lebron-james-retirement.jpg"
+          alt="LeBron James" />
+
+        <img
+          class="block"
+          src="https://th.bing.com/th/id/OIP.j_GQzJr5ZbvE_IBOd1ga1gHaE8?cb=iwp2&rs=1&pid=ImgDetMain"
+          alt="Basketball player" />
+
+        <img
+          class="block"
+          src="https://th.bing.com/th/id/OIP.wyqGjSXgh4wUoc-0RGXw1wHaE8?w=235&h=180&c=7&r=0&o=7&cb=iwp2&dpr=1.3&pid=1.7&rm=3"
+          alt="Game moment" />
+      </section>
+
+      <br />
+
+      <section class="img-container-rounded">
+        <img
+          class="block"
+          src="https://th.bing.com/th/id/OIP.wyqGjSXgh4wUoc-0RGXw1wHaE8?w=235&h=180&c=7&r=0&o=7&cb=iwp2&dpr=1.3&pid=1.7&rm=3"
+          alt="Stephen Curry" />
+
+        <img
+          class="block"
+          src="https://wallpaperaccess.com/full/659155.jpg"
+          alt="Basketball action" />
+
+        <img
+          class="block"
+          src="https://wallpaperaccess.com/full/3035857.jpg"
+          alt="Player dunking" />
+      </section>
+    </div>
+
+    <section></section>
+  </body>
+</html>
