@@ -10,10 +10,12 @@
         position: fixed;
         top: 0;
         width: 100%;
-        z-index: 1;
+        z-index: 10;
       }
 
       .navbar {
+        border-bottom: none;
+        background-color: transparent;
         transition: background-color 0.5s ease, border-bottom 0.5s ease;
         display: flex;
         justify-content: space-between;
@@ -21,7 +23,7 @@
         padding: 20px 40px;
         background-color: transparent;
         font-size: 3.2rem;
-        font-weight: 0;
+        color: white;
       }
 
       .navbar.scrolled {
@@ -29,65 +31,37 @@
         border-bottom: 0.1px solid gray;
       }
 
-      .nav-right {
-        display: flex;
-
-        align-items: center;
-
-        gap: 10px;
-      }
-
-      .nav-left {
-        display: flex;
-
-        align-items: center;
-
-        gap: 10px;
-      }
-
-      .contact-link {
-        text-decoration: none;
-
+      .navbar.scrolled a {
         color: black;
       }
 
       .logo {
+        position: absolute;
+        top: 40vh;
+        left: 50%;
+        transform: translateX(-50%) scale(5);
         font-size: 4.8rem;
-
-        letter-spacing: 1.12rem;
-
+        letter-spacing: 2rem;
         font-weight: 512;
-        opacity: 0;
-        transform: translateY(-20px);
-        transition: opacity 0.5s ease, transform 0.5s ease;
+        color: white;
+        text-transform: uppercase;
+        transition: all 0.9s ease;
+        z-index: 5;
       }
-      .logoBack {
+
+      .logo.scrolled {
+        position: fixed;
+        top: 20px;
+        left: 51%;
+        transform: translateX(-50%) scale(1);
+        color: black;
+        letter-spacing: 1.12rem;
+        z-index: 20;
         font-size: 4.8rem;
-
-        letter-spacing: 1.12rem;
-
-        font-weight: 512;
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: auto;
-      }
-
-      #plus-sign {
-        font-size: 20px;
-
-        font-weight: 600;
-      }
-
-      #hamburger {
-        display: inline-block;
       }
 
       a {
-        color: black;
-      }
-
-      #user-icon {
-        display: inline-block;
+        color: white;
       }
 
       #background-image {
@@ -97,46 +71,30 @@
         width: 100%;
         height: 100vh;
         background-repeat: no-repeat;
+        position: relative;
+        justify-content: center;
+        color: white;
+        font-size: 8rem;
+        display: flex;
+        align-items: end;
       }
 
-      #title {
+      .img-container-notrounded {
+        overflow-x: hidden;
         display: flex;
-        margin-left: 10%;
-        font-size: 19.5vw;
-        text-transform: uppercase;
-        color: white;
-        letter-spacing: 7rem;
-        padding-top: 9vh;
-        text-decoration: none;
+        justify-content: space-evenly;
       }
 
       hr {
         height: 0.5vh;
-        background-color: white;
+        background-color: black;
         border: none;
-        width: 69%;
-        margin: 2.69% auto;
+        width: 100%;
         transform: scaleX(0);
         transform-origin: center;
         animation: expandHr 1s ease-out forwards;
-      }
-
-      #hrcircle1,
-      #hrcircle {
-        background-color: white;
-        border-radius: 50%;
-        width: 15px;
-        height: 15px;
-      }
-
-      #hrcircle1 {
-        transform: translate(140px, -66px);
-        animation: hrcircle1 3.1s ease-out forwards;
-      }
-
-      #hrcircle {
-        transform: translate(1340px, -50px);
-        animation: hrcircle 3.1s ease-out forwards;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
       }
 
       @keyframes expandHr {
@@ -144,57 +102,74 @@
           transform: scaleX(1);
         }
       }
-
-      @keyframes hrcircle {
-        to {
-          transform: translate(1261px, -49.4px);
-        }
-      }
-
-      @keyframes hrcircle1 {
-        to {
-          transform: translate(230px, -64.8px);
-        }
-      }
     </style>
   </head>
+
   <body>
-    <header>
-      <nav class="navbar">
-        <div class="nav-left">
-          <span id="plus-sign">+</span>
-          <a href="#" class="contact-link">Contact Us</a>
-        </div>
-        <span class="logo">LAHNI</span>
-        <div class="nav-right">
-          <div id="menu">
-            <a href="index.html">
-              <div id="hamburger">&#9776;</div>
-              MENU
-            </a>
-          </div>
-        </div>
-      </nav>
-    </header>
     <section id="background-image">
-      <a href="#"><div id="title">Lahni</div></a>
-      <div><hr /></div>
-      <div id="hrcircle"></div>
-      <div id="hrcircle1"></div>
+      <a href="index.html">
+        <span class="logo">LAHNI</span>
+      </a>
+      <header>
+        <nav class="navbar">
+          <div class="nav-left">
+            <a href="index.html" class="contact-link">
+              <span id="plus-sign">+</span> Contact us</a
+            >
+          </div>
+          <div class="nav-right">
+            <div id="menu">
+              <a href="index.html">
+                <div id="hamburger">&#9776;</div>
+                MENU
+              </a>
+            </div>
+          </div>
+        </nav>
+      </header>
     </section>
+    <br />
+    <br />
+    <section class="img-container-notrounded">
+      <img
+        class="block"
+        src="https://th.bing.com/th/id/OIP.wyqGjSXgh4wUoc-0RGXw1wHaE8?w=235&h=180&c=7&r=0&o=7&cb=iwp2&dpr=1.3&pid=1.7&rm=3"
+        alt="Stephen Curry" />
 
-    <div style="height: 300vh"></div>
+      <img
+        class="block"
+        src="https://wallpaperaccess.com/full/659155.jpg"
+        alt="Basketball action" />
 
+      <img
+        class="block"
+        src="https://wallpaperaccess.com/full/3035857.jpg"
+        alt="Player dunking" />
+
+      <img
+        class="block"
+        src="https://static1.srcdn.com/wordpress/wp-content/uploads/2024/10/lebron-james-retirement.jpg"
+        alt="LeBron James" />
+    </section>
+    <br /><br />
+    <section id="background-image">Emperio fancy wordelagas</section>
+    <br />
+    <div><hr /></div>
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
     <script>
       document.addEventListener("scroll", () => {
         const navbar = document.querySelector(".navbar");
         const logo = document.querySelector(".logo");
-        if (window.scrollY > 0) {
+
+        if (window.scrollY > window.innerHeight * 0.05) {
           navbar.classList.add("scrolled");
-          logo.classList.add("logoBack");
+          logo.classList.add("scrolled");
         } else {
           navbar.classList.remove("scrolled");
-          logo.classList.remove("logoBack");
+          logo.classList.remove("scrolled");
         }
       });
     </script>
