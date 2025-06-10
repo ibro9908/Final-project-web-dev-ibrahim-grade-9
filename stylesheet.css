@@ -23,6 +23,8 @@ html {
 
 body {
   font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
 }
 
 #hero-video {
@@ -42,20 +44,19 @@ body {
 
   align-items: center;
 
-  padding: 20px 40px;
-
+  padding: 0.6em;
   background-color: white;
 
-  border-bottom: 0.1px solid gray;
+  border-bottom: 0.1vh solid gray;
 
   font-size: 3.2rem;
   font-weight: 0;
-  height: 50px;
+  height: 6.9vh;
 }
 
 .logo {
   position: fixed;
-  top: 20px;
+  top: 2.72vh;
   left: 51%;
   transform: translateX(-50%) scale(1);
   color: black;
@@ -67,16 +68,12 @@ body {
 .img-container-notrounded {
   display: flex;
 
-  gap: 33px;
+  gap: 2%;
 
   overflow-x: scroll;
 }
 
 .img-container-notrounded img {
-  height: 360px;
-
-  width: 22.411111%;
-
   transition: transform 0.5s ease;
 
   object-fit: cover;
@@ -103,7 +100,7 @@ body {
 }
 
 .img-container-rounded img {
-  height: 400px;
+  height: 53.9vh;
 
   width: 25%;
 
@@ -114,4 +111,22 @@ body {
   transition: transform 0.5s ease;
 
   object-fit: cover;
+}
+
+hr {
+  height: 0.5vh;
+  background-color: black;
+  border: none;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: center;
+  animation: expandHr 1s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes expandHr {
+  to {
+    transform: scaleX(1);
+  }
 }
