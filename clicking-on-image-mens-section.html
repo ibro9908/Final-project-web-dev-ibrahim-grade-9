@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Men’s Fashion | Lahni - Tailored Luxury for the Modern Man</title>
+    <style>
+      .grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+      }
+
+      .card {
+        background: white;
+        border-radius: 0.1rem;
+        padding-bottom: 2rem;
+        text-align: center;
+        flex-basis: 22%;
+        margin-bottom: 2rem;
+        width: 60.44444vh;
+      }
+
+      .card img {
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .price {
+        font-size: 2.3rem;
+        color: black;
+        margin: 1rem 0 0.5rem;
+      }
+
+      .old-price {
+        text-decoration: line-through;
+        color: gray;
+        font-size: 2rem;
+        margin-left: 0.8rem;
+      }
+
+      .name {
+        font-size: 2.3rem;
+        color: #333;
+        margin-bottom: 0.5rem;
+      }
+
+      .label {
+        display: inline-block;
+        margin-top: 0.5rem;
+        background: #eee;
+        color: #111;
+        padding: 0.4rem 0.8rem;
+        font-size: 2.8rem;
+        border-radius: 0.4rem;
+        margin: 1rem;
+      }
+
+      #chose-types-of-items-to-buy {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 8rem;
+        padding-top: 3rem;
+        gap: 3rem;
+      }
+
+      #chose-types-of-items-to-buy img {
+        flex: 1 1 250px;
+        max-width: 300px;
+        object-fit: cover;
+        border-radius: 50%;
+        aspect-ratio: 1 / 1.05;
+        transition: transform 0.5s ease;
+        width: 16rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-left">
+          <div id="contact-toggle" class="contact-link">
+            <span id="plus-sign">+</span> Contact us
+          </div>
+          <div class="dropdown" id="contact-dropdown">
+            <button class="close-button" id="close-contact">&times;</button>
+            <ul>
+              <li><a href="index.html">Discover</a></li>
+              <li>
+                <a href="Seasonal Collections.html">Seasonal Collections</a>
+              </li>
+              <li><a href="Mens Section.html">Men’s Collection</a></li>
+              <li><a href="About Lahni.html">Beyond the Fabric</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="index.html">
+          <span class="logo">LAHNI</span>
+        </a>
+
+        <div class="nav-right">
+          <div id="hamburger">&#9776; MENU</div>
+          <div class="dropdown" id="dropdown-menu">
+            <button id="close-button" class="close-button">&times;</button>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Lookbook</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <br />
+    <div class="grid">
+      <a href="clicking-on-image-mens-section.html">
+        <div class="card">
+          <span class="label">Best Seller</span>
+          <img
+            src="https://img.hollisterco.com/is/image/anf/KIC_328-5097-00151-101_model1.jpg?policy=product-large"
+            alt="Campus 00s Shoes" />
+          <p class="name">Campus 00s Shoes</p>
+          <p class="price">$105 <span class="old-price">$140</span></p>
+        </div>
+      </a>
+    </div>
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const dropdown = document.getElementById("dropdown-menu");
+
+      hamburger.addEventListener("click", () => {
+        dropdown.classList.toggle("active");
+      });
+      const closeBtn = document.getElementById("close-button");
+
+      closeBtn.addEventListener("click", () => {
+        dropdown.classList.remove("active");
+      });
+
+      const contactToggle = document.getElementById("contact-toggle");
+      const contactDropdown = document.getElementById("contact-dropdown");
+      const closeContact = document.getElementById("close-contact");
+
+      contactToggle.addEventListener("click", () => {
+        contactDropdown.classList.toggle("active");
+      });
+
+      closeContact.addEventListener("click", () => {
+        contactDropdown.classList.remove("active");
+      });
+    </script>
+  </body>
+</html>
