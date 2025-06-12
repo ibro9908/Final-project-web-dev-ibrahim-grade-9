@@ -63,7 +63,7 @@ body {
   align-items: center;
   padding: 0.6em 3rem;
   background-color: white;
-  border-bottom: 0.1vh solid gray;
+  border-bottom: 0.3vh solid rgb(113, 4, 4);
   font-size: 3.2rem;
   font-weight: 0;
 }
@@ -122,7 +122,7 @@ body {
 }
 hr {
   height: 0.5vh;
-  background-color: black;
+  background-color: rgb(113, 4, 4);
   border: none;
   width: 100%;
   transform: scaleX(0);
@@ -224,12 +224,17 @@ hr {
 .caption {
   display: inline-block;
   margin-top: 0.5rem;
-  background: #eee;
-  color: #111;
+  background: rgb(113, 4, 4);
+  color: white;
   padding: 0.4rem 0.8rem;
   font-size: 2.8rem;
   border-radius: 0.4rem;
   margin: 1rem;
+}
+
+.navbar a:hover,
+.dropdown a:hover {
+  color: rgb(113, 4, 4);
 }
 
 @media (max-width: 768px) {
@@ -243,6 +248,7 @@ hr {
 }
 
 .section-titles {
+  color: #3e2723;
   text-align: center;
   font-size: 4rem;
 }
@@ -275,4 +281,39 @@ hr {
 
     scale: 1;
   }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #333;
+  font-size: 2rem;
+  line-height: 150%;
+}
+
+.footer-logo {
+  font-size: 25vh;
+  font-weight: bolder;
+  color: black;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 9vh;
+}
+
+.footer a:hover {
+  color: rgb(113, 4, 4);
 }
