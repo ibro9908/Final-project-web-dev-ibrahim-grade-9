@@ -1,37 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="stylesheet.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Winter Collection | Lahni - Warmth Meets Luxury</title>
   </head>
-
+  <style>
+    /* Styling for the hero video right after my navbar*/
+    video {
+      height: 140vh;
+    }
+  </style>
+  <!--I tried adding figure tags to this page but for some reason everthing would break on this page-->
   <body>
     <header>
       <nav class="navbar">
+        <!-- Left side of the nav bar with contact toggle -->
         <div class="nav-left">
           <div id="contact-toggle" class="contact-link">
             <span id="plus-sign">+</span> Contact us
           </div>
+
+          <!-- Contact dropdown menu -->
           <div class="dropdown" id="contact-dropdown">
+            <!-- Close button for contact dropdown -->
             <button class="close-button" id="close-contact">&times;</button>
+
             <ul>
-              <li><a href="#">Customer Support</a></li>
-              <li><a href="#">FAQs</a></li>
-              <li><a href="#">Shipping Info</a></li>
+              <!-- Contact info -->
+              <li><h5>phone number</h5></li>
+              <li><p>080 245 4009</p></li>
+              <li><h5>Email</h5></li>
+              <li><p>Lahni@gmail.com</p></li>
+              <li><h5>Contact Directly</h5></li>
+
+              <!-- Contact form -->
+              <li>
+                <form class="contact-form" action="#" method="post">
+                  <label for="name">Name:</label><br />
+                  <input type="text" id="name" name="name" required /><br />
+
+                  <label for="email">Email:</label><br />
+                  <input type="email" id="email" name="email" required /><br />
+
+                  <label for="message">Message:</label><br />
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    required></textarea
+                  ><br /><br />
+
+                  <!-- Submit button -->
+                  <button type="submit">Submit</button>
+
+                  <!-- Social media contacts -->
+                  <li><h5>Social Media</h5></li>
+                  <li>Lahni@instagram.com</li>
+                  <li>Lahni@twitter.com</li>
+                </form>
+                <br /><br />
+              </li>
             </ul>
           </div>
         </div>
 
+        <!-- Logo links to homepage -->
         <a href="index.html">
           <span class="logo">LAHNI</span>
         </a>
 
+        <!-- Right side of nav bar with hamburger menu -->
         <div class="nav-right">
           <div id="hamburger">&#9776; MENU</div>
+
+          <!-- Navigation dropdown menu -->
           <div class="dropdown" id="dropdown-menu">
+            <!-- Close button for menu -->
             <button id="close-button" class="close-button">&times;</button>
+
+            <!-- Navigation links -->
             <ul>
               <li><a href="index.html">Discover</a></li>
               <li>
@@ -43,152 +93,171 @@
           </div>
         </div>
       </nav>
-      <a href="women-page.html">
-        <video autoplay muted loop playsinline id="hero-video">
-          <source src="videos/vv.mp4" />
-        </video>
-      </a>
+      <!--Html for video-->
+      <video autoplay muted loop playsinline id="hero-video">
+        <source src="videos/image-1-pollo.ai" />
+      </video>
     </header>
-
+    <h1 style="font-size: 6rem" class="section-titles">Season Collection</h1>
     <br />
-
     <br />
-
+    <!--Html for section of not roundedwith overflow scroll showing footwear in winter-->
     <div class="view">
-      <h1><p class="section-titles">Footwear</p></h1>
+      <h1 class="section-titles">Footwear</h1>
       <section class="img-container-notrounded">
-        <a href="women-page.html">
+        <figure>
           <img
             class="block"
             src="images/boots-1- sora.webp"
-            alt="Basketball action" />
-        </a>
-        <a href="women-page.html">
+            alt="A pair of black leather winter boots with chunky lug soles and fleece lining. Near the ankle, an embossed emblem of interlocking curves forming a subtle diamond shape is stamped into the leather — representing the Lahni brand. Shot on a soft gray background." />
+        </figure>
+
+        <figure>
           <img
             class="block"
             src="images/boots-2-sora.webp"
-            alt="Player dunking" />
-        </a>
-        <a href="">
+            alt="Warm tan suede Chelsea boots with a deep brown elastic side panel. At the back heel, a brushed bronze metal plate is riveted in with a minimalist abstract icon: four crescent-like lines that swirl inward to form a layered spiral, like a modern wind motif. It catches the light subtly when turned." />
+        </figure>
+
+        <figure>
           <img
             class="block"
             src="images/boots-3-sora.webp"
-            alt="LeBron James" />
-        </a>
-        <a href="">
+            alt="
+            Matte obsidian snow boots with faux fur lining and industrial lacing. The tongue features a dark rubber emblem shaped like a segmented diamond — made of overlapping curved shards, outlined faintly in smoky silver. It looks like it's been carved from a single motion." />
+        </figure>
+
+        <figure>
           <img
             class="block"
             src="images/boots-4-sora.webp"
-            alt="Basketball player" />
-        </a>
-        <a href="">
-          <img class="block" src="images/boots-5-sora.webp" alt="Game moment" />
-        </a>
+            alt="Sleek high-top sneakers in deep forest green leather and neoprene. On the outer side panel, a glossy black-on-black stitched symbol resembling a twisted infinity loop within a shield-like diamond frame appears. The lines have a calligraphic flow — rich but restrained." />
+        </figure>
+
+        <figure>
+          <img
+            class="block"
+            src="images/boots-5-sora.webp"
+            alt="Rugged olive green boots with polished trim and a thick sole. Stamped into the outer heel is a burnished copper emblem made of curved interlocking arcs that form a leaf-shaped diamond, a blend of nature and geometry that gives off quiet luxury." />
+        </figure>
       </section>
 
       <br />
-
-      <section class="img-container-rounded">
-        <a href="">
-          <img
-            class="block"
-            src="images/chatgpt-1 source-Gucci Navy Blue Polyester Down Jacket.png"
-            alt="Stephen Curry" />
-        </a>
-        <a href="">
-          <img
-            class="block"
-            src="images/image-4 sora.webp"
-            alt="Basketball action" />
-        </a>
-        <a href="">
-          <img
-            class="block"
-            src="images/image-5 sora.webp"
-            alt="Player dunking" />
-        </a>
-      </section>
       <h1><p class="section-titles">Jackets</p></h1>
+      <!--Html for section showing jackets with no overflow scroll in winter-->
       <section class="img-container-rounded">
-        <a href="">
+        <figure>
           <img
             class="block"
             src="images/chatgpt-1 source-Gucci Navy Blue Polyester Down Jacket.png"
             alt="Stephen Curry" />
-        </a>
-        <a href="">
+        </figure>
+        <figure>
           <img
             class="block"
             src="images/image-4 sora.webp"
             alt="Basketball action" />
-        </a>
-        <a href="">
+        </figure>
+        <figure>
           <img
             class="block"
             src="images/image-5 sora.webp"
-            alt="Player dunking" />
-        </a>
+            alt="A luxury high-fashion men's winter jacket shown in an editorial-style product shot on a soft, off-white background. It is a winter jacket with a decorative l logo somewhere on it .Soft ambient lighting enhances the textures and gives the jacket a refined, exclusive look. No text, no model — just the jacket." />
+        </figure>
       </section>
+      <section class="img-container-rounded">
+        <figure>
+          <img
+            class="block"
+            src="images/image-4 sora.webp"
+            alt="Stephen Curry" />
+        </figure>
+        <figure>
+          <img
+            class="block"
+            src="images/image-5 sora.webp"
+            alt="A luxury high-fashion men's winter jacket shown in an editorial-style product shot on a soft, off-white background. It is a winter jacket with a decorative l logo somewhere on it .Soft ambient lighting enhances the textures and gives the jacket a refined, exclusive look. No text, no model — just the jacket." />
+        </figure>
+        <figure>
+          <img
+            class="block"
+            src="images/chatgpt-1 source-Gucci Navy Blue Polyester Down Jacket.png"
+            alt="Player dunking" />
+        </figure>
+      </section>
+      <!--Html for section of not rounded with overflow scroll showing Accessories in winter-->
       <h1><p class="section-titles">Accesories</p></h1>
       <section class="img-container-notrounded">
-        <a href="women-page.html">
+        <figure>
           <img
             class="block"
             src="images/accessories-1-sora.webp"
-            alt="Basketball action" />
-        </a>
-        <a href="women-page.html">
+            alt="A long, double-ply cashmere scarf in warm stone gray, folded and draped softly over a velvet surface. The ends are finished with delicate short fringe. Near the lower hem, a small matte leather patch in mocha brown is stitched on, and features two overlapping serif-style “L”s — the first bold and upright, the second slightly forward and lower, creating a mirrored monogram. The emblem is blind-embossed for a subtle, tactile luxury finish." />
+        </figure>
+        <figure>
           <img
             class="block"
             src="images/accessories-2-soro.webp"
-            alt="Player dunking" />
-        </a>
-        <a href="">
+            alt="A ribbed merino wool scarf in rich burgundy, styled in a flat lay with natural folds. Along one corner, a small brushed silver metal tag is pinned, engraved with two flowing L initials — the rear one taller, the front one shifted diagonally and overlapping — both in an ornate serif font, giving a jewelry-like detail that reflects minimal branding with maximal style." />
+        </figure>
+        <figure>
           <img
             class="block"
             src="images/accessories-3-sora.webp"
-            alt="LeBron James" />
-        </a>
-        <a href="">
+            alt="Sleek winter gloves in smooth black lambskin leather, with a cashmere lining and subtle stitch detailing. On the outer wrist, a raised embossed emblem shows two stylized “L”s — one slightly raised and behind, the other in front and angled forward, forming a timeless luxury monogram. The finish is semi-glossy, blending into the leather texture for quiet elegance." />
+        </figure>
+        <figure>
           <img
             class="block"
             src="images/accessories-4-sora.webp"
-            alt="Basketball player" />
-        </a>
-        <a href="">
+            alt="Charcoal gray wool gloves with leather palm grips and a tailored wrist strap. At the base of the strap, a tiny satin metal button in dark gold carries a laser-engraved design of overlapping serif “L” letters — the back one upright, the front one leaning slightly left and tucked lower, catching light with a polished sheen." />
+        </figure>
+        <figure>
           <img
             class="block"
             src="images/accessories-5-sora.webp"
-            alt="Game moment" />
-        </a>
+            alt="A chunky ribbed beanie in off-white wool with a folded cuff, styled against a winter-gray backdrop. Sewn to the front is a black leather patch with an embossed logo of two intertwined capital Ls in a luxury serif style — the second L pulled slightly down and forward, like a drop-shadow made of metal. The embossed lines are crisp and tactile, visible but understated." />
+        </figure>
       </section>
     </div>
     <br />
+    <!-- Horizontal divider line -->
+    <br /><br />
     <div><hr /></div>
+
+    <!-- Footer section -->
     <footer class="footer">
       <div class="footer-links">
-        <a href="#">Find a Store</a>
-        <a href="#">Contact us</a>
-        <a href="#">Language</a>
-      </div>
-      <div class="footer-logo">LAHNI</div>
-      <div class="footer-links">
         <a href="#">Back to Top</a>
-        <a href="#">Privacy & Cookie Policy</a>
-        <a href="#">Investors</a>
-        <a href="#">Copyright Information</a>
-        <a href="#">Copyright Information</a>
+        <a href="under-consruction-page.html">Language</a>
+        <a href="under-consruction-page.html">Code of Ethics</a>
+      </div>
+
+      <!-- Footer logo -->
+      <div class="footer-logo">LAHNI</div>
+
+      <!-- Footer links -->
+      <div class="footer-links">
+        <a href="About Lahni.html">About Lahni</a>
+        <a href="under-consruction-page.html">Investors</a>
+        <a href="under-consruction-page.html">Copyright Information</a>
+        <a href="under-consruction-page.html">Privacy & Cookie Policy</a>
       </div>
     </footer>
+
+    <!-- Script for dropdown interactivity -->
     <script>
       const hamburger = document.getElementById("hamburger");
       const dropdown = document.getElementById("dropdown-menu");
 
+      // Show/hide main menu when hamburger is clicked
       hamburger.addEventListener("click", () => {
         dropdown.classList.toggle("active");
       });
+
       const closeBtn = document.getElementById("close-button");
 
+      // Close main menu when X is clicked
       closeBtn.addEventListener("click", () => {
         dropdown.classList.remove("active");
       });
@@ -197,10 +266,12 @@
       const contactDropdown = document.getElementById("contact-dropdown");
       const closeContact = document.getElementById("close-contact");
 
+      // Show/hide contact form
       contactToggle.addEventListener("click", () => {
         contactDropdown.classList.toggle("active");
       });
 
+      // Close contact form when X is clicked
       closeContact.addEventListener("click", () => {
         contactDropdown.classList.remove("active");
       });

@@ -5,8 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Arrivals | Lahni - Discover the Latest in Luxury Fashion</title>
-
     <style>
+      /* Styling for my navbar aanimation*/
+
+      /* Styling for my navbar header*/
       header {
         position: fixed;
         top: 0;
@@ -14,17 +16,19 @@
         z-index: 10;
       }
 
+      /* Styling for the body of this pge*/
       body {
-        font-size: 1.6rem;
         margin: 0;
         padding: 0;
       }
 
+      /* stling for all a's on ths webpage*/
       a {
         color: white;
         text-decoration: none;
       }
 
+      /* Styling for navbar befor scrolling*/
       .navbar {
         box-sizing: border-box;
         position: fixed;
@@ -39,23 +43,36 @@
         font-size: 3.2rem;
         font-weight: 0;
         color: white;
+        font-family: Arial, Helvetica, sans-serif;
       }
 
+      /* Styling for the navbar after scrolling*/
       .navbar.scrolled {
         background-color: white;
         border-bottom: 0.3vh solid #3e2723;
         color: black;
+        font-size: 3.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.6em 3rem;
+        border-bottom: 0.3vh solid rgb(113, 4, 4);
+        font-size: 3.2rem;
+        font-weight: 0;
       }
 
+      /* Styling for the navbar a's after scrolling*/
       .navbar.scrolled a {
         color: black;
       }
 
+      /* Styling for the logo befor scrolling*/
       .logo {
         position: absolute;
         top: 40vh;
         transform: scale(5);
-        font-size: 7vh;
+        /*styling so its big before scolling*/
+        font-size: 3.15vw;
         font-weight: 512;
         color: white;
         text-transform: uppercase;
@@ -66,16 +83,18 @@
         letter-spacing: normal;
       }
 
+      /* Styling for the logo after scrolling*/
       .logo.scrolled {
         position: fixed;
-        top: 2.6vh;
+        top: 3.2vh;
         transform: translateX(-50%) scale(1);
         color: black;
         z-index: 20;
-        font-size: 4.8rem;
-        left: 50%;
+        font-size: 3.2rem;
+        left: 52.5%;
       }
 
+      /* Styling for my top background image*/
       #background-image {
         padding-top: 40vh;
         background-image: url(images/Image1\ -sora.webp);
@@ -91,12 +110,12 @@
         justify-content: center;
       }
 
+      /* Styling for second backgroud image*/
       #background-image2 {
         padding-top: 40vh;
         background-image: url(images/image2-\ sora.webp);
         background-size: cover;
         background-position: center;
-        width: 100%;
         height: 100vh;
         background-repeat: no-repeat;
         position: sticky;
@@ -105,43 +124,91 @@
         font-size: 8rem;
         display: flex;
         justify-content: center;
+        margin: 2rem;
       }
-
+      /* Styling for not rounded container but no scroll*/
       .img-container-notrounded {
-        overflow-x: hidden;
         display: flex;
         justify-content: space-evenly;
+        flex-wrap: wrap;
+        overflow: hidden;
       }
 
       .img-container-notrounded img {
         transition: transform 0.5s ease;
         object-fit: cover;
+        width: 18vw;
       }
     </style>
   </head>
   <body>
+    <!--html for background imgage section-->
     <section id="background-image">
       <a href="index.html">
-        <div class="logo">L A H N I</div>
+        <div class="logo">LAHNI</div>
       </a>
       <header>
+        <!--html for navbar and its animations on this page-->
         <nav class="navbar">
           <div class="nav-left">
+            <!-- Left side of the nav bar with contact toggle -->
             <div id="contact-toggle" class="contact-link">
               <span id="plus-sign">+</span> Contact us
             </div>
+            <!-- Contact dropdown menu -->
             <div class="dropdown" id="contact-dropdown">
+              <!-- Close button for contact dropdown -->
               <button class="close-button" id="close-contact">&times;</button>
+              <!-- Navigation links -->
               <ul>
-                <li><a href="#">Customer Support</a></li>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">Shipping Info</a></li>
+                <!-- Contact info -->
+                <li><h5>phone number</h5></li>
+                <li><p>080 245 4009</p></li>
+                <li><h5>Email</h5></li>
+                <li><p>Lahni@gmail.com</p></li>
+                <li><h5>Contact Directly</h5></li>
+
+                <!-- Contact form -->
+                <li>
+                  <form class="contact-form" action="#" method="post">
+                    <label for="name">Name:</label><br />
+                    <input type="text" id="name" name="name" required /><br />
+
+                    <label for="email">Email:</label><br />
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required /><br />
+
+                    <label for="message">Message:</label><br />
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="6"
+                      required></textarea
+                    ><br /><br />
+
+                    <!-- Submit button -->
+                    <button type="submit">Submit</button>
+
+                    <!-- Social media contacts -->
+                    <li><h5>Social Media</h5></li>
+                    <li>Lahni@instagram.com</li>
+                    <li>Lahni@twitter.com</li>
+                  </form>
+                  <br /><br />
+                </li>
               </ul>
             </div>
           </div>
+          <!-- Right side of nav bar with hamburger menu -->
           <div class="nav-right">
+            <!--hamburger is achieved withh entitiy -->
             <div id="hamburger">&#9776; MENU</div>
+            <!-- Navigation dropdown menu -->
             <div class="dropdown" id="dropdown-menu">
+              <!-- Close button for menu -->
               <button id="close-button" class="close-button">&times;</button>
               <ul>
                 <li><a href="index.html">Discover</a></li>
@@ -159,112 +226,134 @@
         <span
           ><p style="padding-top: 56vh; font-size: 8rem">
             L Monogram Section
+            <!-- meaans products with iconic logos on it-->
           </p></span
         >
       </div>
     </section>
 
     <br /><br />
-    <h1><p class="section-titles">New Arrivals</p></h1>
+    <!--Section for new arrivals in Lahni-->
+    <h1 class="section-titles">New Arrivals</h1>
     <section class="img-container-notrounded">
-      <a href="women-page.html">
+      <figure>
         <img
           class="block"
-          src="images/Lahni landing page image.png"
-          alt="Basketball action" />
-      </a>
-      <a href="women-page.html">
+          src="images/image-8-ltx studio.jpg"
+          alt="Male sitting railing on what loos like a bridge wearing shorts, and a white shirt and deep violet pull up" />
+      </figure>
+      <figure>
         <img
           class="block"
-          src="https://wallpaperaccess.com/full/3035857.jpg"
-          alt="Player dunking" />
-      </a>
-      <a href="">
+          src="images/image-5-ltx studio.jpg"
+          alt="Feal walking in icy allyway wearing greenish rain jacket and pants" />
+      </figure>
+      <figure>
         <img
           class="block"
-          src="https://static1.srcdn.com/wordpress/wp-content/uploads/2024/10/lebron-james-retirement.jpg"
-          alt="LeBron James" />
-      </a>
-      <a href="">
+          src="images/image-6-ltx studio.jpg"
+          alt="Femal sitting on edge of a ledge leading to waer, sunset bacground, white caardigan not full on, with blue jorts, with a determined expression" />
+      </figure>
+      <figure>
         <img
           class="block"
-          src="https://th.bing.com/th/id/OIP.j_GQzJr5ZbvE_IBOd1ga1gHaE8?cb=iwp2&rs=1&pid=ImgDetMain"
-          alt="Basketball player" />
-      </a>
+          src="images/image-7-ltx studio.jpg"
+          alt="Female on mountain looking at water, has a bun and is wearing beige coloured pants but feet not showing, and white longsleeved shirt cuffed on arms and then layers beige kinda cloak only reach the waist." />
+      </figure>
     </section>
 
     <br /><br />
+    <!-- second background image for fathers say gifts ideas -->
     <section id="background-image2">Father's Day Gifts</section>
 
+    <!--showcasing men and women sides link in one row-->
     <div class="side-by-side">
       <div class="image-section">
         <a href="Mens Section.html">
           <p class="caption">MEN</p>
-          <img
-            src="https://wallpaperaccess.com/full/659155.jpg"
-            alt="Left image" />
+          <figure>
+            <img
+              src="images/image-1-ltx studio.jpg"
+              alt="Dude with white shirt and button up suit staring at something in the distnce with  a evening setting and in a busy city area" />
+          </figure>
         </a>
       </div>
 
       <div class="image-section">
-        <a href="womens Section.html">
+        <a href="under-consruction-page.html">
           <p class="caption">WOMEN</p>
-          <img
-            src="https://wallpaperaccess.com/full/659155.jpg"
-            alt="Right image" />
+          <figure>
+            <img
+              src="images/image-4-ltx studio.jpg"
+              alt="Girl with open sweater staring at camera intensly while standing on a bridge with snow behind her, sunset setting" />
+          </figure>
         </a>
       </div>
     </div>
+    <!-- Horizontal divider line -->
     <div><hr /></div>
+    <!-- Footer section -->
     <footer class="footer">
       <div class="footer-links">
-        <a href="#">Find a Store</a>
-        <a href="#">Contact us</a>
-        <a href="#">Language</a>
+        <a href="index.html">Back to Top</a>
+        <a href="under-consruction-page.html">Language</a>
+        <a href="under-consruction-page.html">Code of Ethics</a>
       </div>
+      <!-- Footer logo -->
+      <div class="footer-logo">LAHNI</div>
       <div class="footer-links">
-        <a href="#">Back to Top</a>
-        <a href="#">Privacy & Cookie Policy</a>
-        <a href="#">Investors</a>
-        <a href="#">Copyright Information</a>
-        <a href="#">Copyright Information</a>
+        <a href="About Lahni.html">About Lahni</a>
+        <a href="under-consruction-page.html">Investors</a>
+        <a href="under-consruction-page.html">Copyright Information</a>
+        <a href="under-consruction-page.html">Privacy & Cookie Policy</a>
       </div>
     </footer>
-    <div class="footer-logo">LAHNI</div>
+    <!-- Script for dropdown interactivity and contact and menu dropdowns -->
     <script>
+      // Adds a scroll event listener to the entire document
       document.addEventListener("scroll", () => {
+        // Selects the navbar and logo elements from the DOM
         const navbar = document.querySelector(".navbar");
         const logo = document.querySelector(".logo");
 
+        // Checks if the user has scrolled more than 5% of the viewport height
         if (window.scrollY > window.innerHeight * 0.05) {
+          // Adds the 'scrolled' class to navbar and logo for style changes
           navbar.classList.add("scrolled");
           logo.classList.add("scrolled");
         } else {
+          // Removes the 'scrolled' class if the scroll is above the threshold
           navbar.classList.remove("scrolled");
           logo.classList.remove("scrolled");
         }
       });
 
-      const hamburger = document.getElementById("hamburger");
-      const dropdown = document.getElementById("dropdown-menu");
-      const closeBtn = document.getElementById("close-button");
+      // Handles toggling of the mobile menu
+      const hamburger = document.getElementById("hamburger"); // The menu button (☰)
+      const dropdown = document.getElementById("dropdown-menu"); // The menu dropdown
+      const closeBtn = document.getElementById("close-button"); // The close button (×)
 
+      // When the hamburger is clicked, show/hide the dropdown
       hamburger.addEventListener("click", () => {
-        dropdown.classList.toggle("active");
+        dropdown.classList.toggle("active"); // Toggles 'active' class to show/hide menu
       });
 
+      // When the close button is clicked, hide the dropdown
       closeBtn.addEventListener("click", () => {
         dropdown.classList.remove("active");
       });
 
-      const contactToggle = document.getElementById("contact-toggle");
-      const contactDropdown = document.getElementById("contact-dropdown");
-      const closeContact = document.getElementById("close-contact");
+      // Handles toggling of the contact section
+      const contactToggle = document.getElementById("contact-toggle"); // The 'Contact us' toggle
+      const contactDropdown = document.getElementById("contact-dropdown"); // The contact dropdown section
+      const closeContact = document.getElementById("close-contact"); // The × button inside contact section
 
+      // When 'Contact us' is clicked, toggle the dropdown visibility
       contactToggle.addEventListener("click", () => {
-        contactDropdown.classList.toggle("active");
+        contactDropdown.classList.toggle("active"); // Shows or hides the contact dropdown
       });
 
+      // When the × inside the contact dropdown is clicked, hide it
       closeContact.addEventListener("click", () => {
         contactDropdown.classList.remove("active");
       });

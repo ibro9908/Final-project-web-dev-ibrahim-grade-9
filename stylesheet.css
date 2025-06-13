@@ -1,12 +1,18 @@
 .contact-link {
   display: inline-block;
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; /* Prevents text from being highlighted */
   text-decoration: none;
+  font-size: 3.2rem;
 }
 
 .contact-link:hover {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 #plus-sign {
@@ -15,51 +21,81 @@
 }
 
 #plus-sign:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
 
+/* Styling for the mobile menu icon (hamburger) */
 #hamburger {
   display: inline-block;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
+  font-size: 3.2rem;
+}
+
+#hamburger a {
+  font-size: 3.2rem;
 }
 
 #hamburger:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
 
+/* General link styling */
 a {
   text-decoration: none;
   color: black;
   list-style-type: none;
 }
 
+/* Base font sizing: 1rem = 10px (easier math) */
 html {
   font-size: 62.5%;
 }
 
+/*styling for ody */
 body {
   font-size: 1.6rem;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
+  letter-spacing: 0.02rem;
+  word-spacing: 0.1rem; /*adds space between words*/
 }
 
+/* styling for  Video banner at the top */
 #hero-video {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
-
   width: 100%;
 }
 
+/* styling for nav bar at the top of the page */
 .navbar {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   z-index: 500;
   position: fixed;
   width: 100%;
   top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 0.6em 3rem;
   background-color: white;
@@ -71,19 +107,20 @@ body {
 .logo {
   display: inline-block;
   position: fixed;
-  top: 19px;
-  left: 50%;
+  top: 3.2vh;
+  -webkit-transform: translateX(-50%) scale(1);
+  -ms-transform: translateX(-50%) scale(1);
   transform: translateX(-50%) scale(1);
   color: black;
-
-  font-size: 4.8rem;
+  font-size: 3.2rem;
 }
 
+/* Horizontal image scroll section */
 .img-container-notrounded {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-
   gap: 2%;
-
   overflow-x: scroll;
   padding: 2rem;
 }
@@ -91,53 +128,91 @@ body {
 .img-container-notrounded img {
   width: 46vh;
   height: 49vh;
+  -o-object-fit: cover;
   object-fit: cover;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
   transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 .img-container-notrounded img:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 
 .img-container-rounded img:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 
+/* Rounded image grid layout */
 .img-container-rounded {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   gap: 16rem;
   padding: 2rem;
 }
 
 .img-container-rounded img {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 300px;
   flex: 0 1 300px;
   max-width: 300px;
   width: 100vh;
   height: 54vh;
+  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 10px;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
   transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
+
+/* Animated horizontal line (HR) that scales into view */
 hr {
   height: 0.5vh;
   background-color: rgb(113, 4, 4);
   border: none;
   width: 100%;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
   transform: scaleX(0);
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
   transform-origin: center;
+  -webkit-animation: expandHr 1s ease-out forwards;
   animation: expandHr 1s ease-out forwards;
-  animation-timeline: view();
+  animation-timeline: view(); /* View-based scroll animation */
   animation-range: entry 0% cover 40%;
 }
 
-@keyframes expandHr {
+@-webkit-keyframes expandHr {
   to {
+    -webkit-transform: scaleX(1);
     transform: scaleX(1);
   }
 }
 
+@keyframes expandHr {
+  to {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+
+/* Menu dropdown (mobile/desktop) */
 .dropdown {
   display: none;
   position: absolute;
@@ -146,6 +221,7 @@ hr {
   background-color: white;
   padding: 1rem;
   z-index: 999;
+  overflow: scroll;
 }
 
 .dropdown ul {
@@ -166,6 +242,7 @@ hr {
   line-height: 3.5rem;
 }
 
+/* When dropdown is active (opened) */
 .dropdown.active {
   top: 0;
   right: 0;
@@ -175,6 +252,7 @@ hr {
   padding: 4%;
 }
 
+/* Styling for close button (X) on dropdowns */
 .close-button {
   position: absolute;
   top: 1rem;
@@ -189,23 +267,44 @@ hr {
   text-align: center;
   cursor: pointer;
   color: white;
+  -webkit-transition: background-color 0.6s ease-in-out,
+    -webkit-transform 0.6s ease-in-out;
+  transition: background-color 0.6s ease-in-out,
+    -webkit-transform 0.6s ease-in-out;
+  -o-transition: transform 0.6s ease-in-out, background-color 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out, background-color 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, background-color 0.6s ease-in-out,
+    -webkit-transform 0.6s ease-in-out;
 }
 
 .close-button:hover {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
   transform: scale(1.3);
   background-color: gray;
 }
 
+h5 {
+  text-decoration: underline;
+}
+
+/* Flexible row of images or blocks */
 .side-by-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   gap: 2rem;
   padding: 2rem;
 }
 
 .image-section {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 45%;
   flex: 1 1 45%;
   text-align: center;
 }
@@ -213,14 +312,22 @@ hr {
 .image-section img {
   width: 100%;
   height: 160vh;
+  -o-object-fit: cover;
   object-fit: cover;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .image-section img:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
 
+/* Section label */
 .caption {
   display: inline-block;
   margin-top: 0.5rem;
@@ -232,67 +339,105 @@ hr {
   margin: 1rem;
 }
 
+/* Hover effect on navigation and dropdown links */
 .navbar a:hover,
 .dropdown a:hover {
   color: rgb(113, 4, 4);
 }
 
+/* Mobile responsiveness */
 @media (max-width: 768px) {
   .side-by-side {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
   .image-section {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 100%;
     flex: 1 1 100%;
   }
 }
 
+/* Section headers */
 .section-titles {
   color: #3e2723;
   text-align: center;
   font-size: 4rem;
+  text-decoration: underline;
 }
 
+/* Shared hover effect styling for interactivity */
 .contact-link:hover,
 #hamburger:hover,
 #plus-sign:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
+  -webkit-transition-duration: 2s;
+  -o-transition-duration: 2s;
   transition-duration: 2s;
+  -webkit-transition: -webkit-transform 2s ease-in-out;
+  transition: -webkit-transform 2s ease-in-out;
+  -o-transition: transform 2s ease-in-out;
   transition: transform 2s ease-in-out;
+  transition: transform 2s ease-in-out, -webkit-transform 2s ease-in-out;
 }
 
+/* Animation for block images fading and scaling in */
 .block {
+  -webkit-animation: appear linear;
   animation: appear linear;
-
   animation-timeline: view();
-
   animation-range: entry 0% cover 40%;
+}
+
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
 }
 
 @keyframes appear {
   from {
     opacity: 0;
-
     scale: 0.5;
   }
-
   to {
     opacity: 1;
-
     scale: 1;
   }
 }
 
+/* Footer layout and styling */
 .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 30px 50px;
   text-align: center;
 }
 
 .footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 10px;
 }
@@ -305,15 +450,20 @@ hr {
 }
 
 .footer-logo {
-  font-size: 25vh;
+  font-size: 11.5vw;
   font-weight: bolder;
   color: black;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
-  letter-spacing: 9vh;
+  letter-spacing: 4vw;
 }
 
+/* Footer link hover */
 .footer a:hover {
   color: rgb(113, 4, 4);
 }
